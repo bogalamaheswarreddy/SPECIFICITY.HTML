@@ -1,0 +1,187 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Profile</title>
+
+    <!-- External CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Internal CSS -->
+    <style>
+        h2 {
+            color: darkblue;
+            text-align: center;
+        }
+
+        .intro {
+            font-size: 18px;
+            color: darkgreen;
+        }
+
+        #registration {
+            background-color: #f0f8ff;
+        }
+
+        h1, h3 {
+            font-family: Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Personal Profile -->
+    <header>
+        <h1 style="color: white; text-align: center;">
+            Student Profile
+        </h1>
+        <p class="subtitle">Welcome to My Personal Webpage</p>
+    </header>
+
+    <!-- About Me -->
+    <section class="container">
+        <h2>Personal Information</h2>
+
+        <h3>About Me</h3>
+
+        <p class="intro">
+            Hello! My name is Maheswar Reddy.
+            I am a student interested in web development
+            and programming. I enjoy learning new technologies
+            and improving my technical skills.
+        </p>
+
+        <h3>My Hobbies</h3>
+        <ul>
+            <li>Learning programming</li>
+            <li>Playing cricket</li>
+            <li>Listening to music</li>
+            <li>Exploring new technologies</li>
+        </ul>
+    </section>
+
+    <!-- Iframe -->
+    <section class="container">
+        <h2>My Favorite Location</h2>
+
+        <p>Explore this location using the map below.</p>
+
+        <iframe
+            src="https://www.google.com/maps?q=Hyderabad&output=embed"
+            width="100%"
+            height="300"
+            style="border: 2px solid #333;"
+            loading="lazy"
+            allowfullscreen>
+        </iframe>
+    </section>
+
+    <!-- Registration Form -->
+    <section class="container" id="registration">
+        <h2>Student Registration Form</h2>
+
+        <form action="#" method="post">
+
+            <!-- Name -->
+            <label for="name">Full Name:</label>
+            <input type="text" id="name"
+                   name="name"
+                   placeholder="Enter your name"
+                   required>
+
+            <!-- Email -->
+            <label for="email">Email:</label>
+            <input type="email" id="email"
+                   name="email"
+                   placeholder="Enter your email"
+                   required>
+
+            <!-- Password -->
+            <label for="password">Password:</label>
+            <input type="password" id="password"
+                   name="password"
+                   placeholder="Enter password"
+                   required>
+
+            <!-- Gender -->
+            <label>Gender:</label>
+            <div class="options">
+                <label>
+                    <input type="radio" name="gender" value="Male">
+                    Male
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" value="Female">
+                    Female
+                </label>
+
+                <label>
+                    <input type="radio" name="gender" value="Other">
+                    Other
+                </label>
+            </div>
+
+            <!-- Course -->
+            <label for="course">Select Course:</label>
+            <select id="course" name="course" required>
+                <option value="">-- Select Course --</option>
+                <option value="CSE">Computer Science</option>
+                <option value="ECE">Electronics</option>
+                <option value="EEE">Electrical</option>
+                <option value="IT">Information Technology</option>
+                <option value="MBA">MBA</option>
+            </select>
+
+            <!-- Skills -->
+            <label>Skills:</label>
+            <div class="options">
+                <label>
+                    <input type="checkbox" name="skills" value="HTML">
+                    HTML
+                </label>
+
+                <label>
+                    <input type="checkbox" name="skills" value="CSS">
+                    CSS
+                </label>
+
+                <label>
+                    <input type="checkbox" name="skills" value="Java">
+                    Java
+                </label>
+
+                <label>
+                    <input type="checkbox" name="skills" value="Python">
+                    Python
+                </label>
+            </div>
+
+            <!-- Date of Birth -->
+            <label for="dob">Date of Birth:</label>
+            <input type="date" id="dob" name="dob">
+
+            <!-- Address -->
+            <label for="address">Address:</label>
+            <textarea id="address" name="address"
+                      rows="4"
+                      placeholder="Enter your address"></textarea>
+
+            <!-- Buttons -->
+            <div class="buttons">
+                <button type="submit">Submit</button>
+                <button type="reset" class="reset">Reset</button>
+            </div>
+
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 Student Profile | Created using HTML and CSS</p>
+    </footer>
+
+</body>
+</html>
