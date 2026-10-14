@@ -1,0 +1,18 @@
+body{
+    background-color:pink;
+    font-family: cursive;
+    border: 2px solid black;
+    color:cornflowerblue;
+}
+
+h1{
+    font-family: 18px;
+    border:inherit;
+
+}
+
+P{
+    font-size: 15px;
+    border: inherit;
+    color:chocolate;
+}
