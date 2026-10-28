@@ -1,0 +1,28 @@
+*{
+background-color:lightblue;
+font-family:cursive;
+}
+h1{
+    color:blue;
+    background-color:tomato;
+    border:2px solid skyblue;
+
+}
+
+h1,h2,h3,h4{
+    color:green;
+    background-color:blue;
+    border:2px solid yellow;
+}
+
+    .java{
+        color:yellow;
+        background-color:purple;
+        boder:2px solid yellow;
+    }
+    
+
+    #fullstack,.java{
+        color:lime;
+        background-color: brown;
+    }

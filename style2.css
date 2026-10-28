@@ -1,0 +1,210 @@
+```css
+/* ------------------------------
+   Basic Page Styling
+------------------------------ */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #222;
+}
+
+header {
+    text-align: center;
+    padding: 30px;
+}
+
+
+/* ------------------------------
+   Navigation
+------------------------------ */
+
+nav {
+    background-color: #222;
+    padding: 15px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+/* Child combinator */
+nav > ul > li > a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    display: block;
+}
+
+/* Unique hover effect for direct child links */
+nav > ul > li > a:hover {
+    background-color: #ff9800;
+    color: black;
+    border-radius: 5px;
+}
+
+
+/* ------------------------------
+   Product Grid
+------------------------------ */
+
+.products {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 30px;
+}
+
+
+/* Product article */
+.product {
+    background-color: white;
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+
+/* :nth-child(odd)
+   Alternate product backgrounds */
+.product:nth-child(odd) {
+    background-color: #e8f4ff;
+}
+
+
+/* Descendant combinator */
+section.products h2 {
+    color: #1565c0;
+    font-weight: bold;
+}
+
+
+/* Product images */
+.product img {
+    width: 100%;
+    max-width: 200px;
+    height: 150px;
+    object-fit: cover;
+}
+
+
+/* Price */
+.price {
+    display: block;
+    margin-top: 15px;
+    font-size: 20px;
+    font-weight: bold;
+    color: green;
+}
+
+
+/* ------------------------------
+   ::first-letter
+------------------------------ */
+
+/* First paragraph inside each product */
+.product .description p::first-letter {
+    font-size: 32px;
+    font-weight: bold;
+}
+
+
+/* ------------------------------
+   Sibling Combinator
+------------------------------ */
+
+/* Any article directly after a
+   featured article */
+article.featured + article {
+    border-left: 6px solid #ff9800;
+}
+
+
+/* ------------------------------
+   Features
+------------------------------ */
+
+.features {
+    background-color: white;
+    padding: 25px 50px;
+    margin: 30px;
+}
+
+
+/* :nth-of-type(3n)
+   Every third li */
+.features li:nth-of-type(3n) {
+    background-color: #ffe082;
+    font-weight: bold;
+    padding: 10px;
+}
+
+
+/* ------------------------------
+   Contact Form
+------------------------------ */
+
+#contact {
+    background-color: white;
+    max-width: 600px;
+    margin: 30px auto;
+    padding: 30px;
+    border-radius: 10px;
+}
+
+#contact label {
+    display: block;
+    margin-top: 15px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+#contact input,
+#contact textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 10px;
+    border: 1px solid #aaa;
+    border-radius: 5px;
+}
+
+
+/* Attribute selector
+   type contains "mail" */
+input[type*="mail"] {
+    background-color: #fff3cd;
+}
+
+
+/* :not()
+   Apply focus style to controls
+   that are NOT disabled */
+#contact input:not(:disabled):focus,
+#contact textarea:not(:disabled):focus {
+    outline: 3px solid #90caf9;
+    border-color: #1976d2;
+}
+
+
+/* Submit button */
+#contact input[type="submit"] {
+    background-color: #1976d2;
+    color: white;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+#contact input[type="submit"]:hover {
+    background-color: #0d47a1;
+}
